@@ -25,6 +25,6 @@ assuming that's the path you used.
 
 Now, set the wallpaper as your desktop background. 
 
-When you want a new Zen saying, simply re-run the script with the same arguments, which will overwrite the 
-original `zen-wallpaper.png` file. Ubuntu will detect the change and automatically update your wallpaper.
+When you want a new Zen saying, simply re-run the script with the same arguments. The script will overwrite the 
+original `zen-wallpaper.png` file, and Ubuntu will detect the change and automatically show the new wallpaper.
 
