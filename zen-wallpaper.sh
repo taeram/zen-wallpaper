@@ -1,17 +1,17 @@
 #!/bin/bash
 
 BACKGROUND_COLOR="black"
+FONT_COLOR="#111"
 FONT_PATH=$HOME/.fonts/Inconsolata.otf
-FONT_SIZE=70
+FONT_SIZE=50
 FONT_URL="http://www.levien.com/type/myfonts/Inconsolata.otf"
-WALLPAPER_SIZE="1920x1080"
+WALLPAPER_SIZE="1920x1032"
 WALLPAPER_PATH=$1
 GITHUB_OAUTH_TOKEN_PATH=$HOME/.zen-wallpaper-oauth.token
 
 # Make sure we have a valid wallpaper path
 if [ ! -e "$WALLPAPER_PATH" ]; then
     echo "Usage: `basename $0` [wallpaper path]";
-    echo "e.g. `basename $0` $HOME/Pictures/"
     exit 1;
 fi
 
@@ -41,7 +41,7 @@ if [ ! -e "$GITHUB_OAUTH_TOKEN_PATH" ]; then
     GITHUB_OAUTH_TOKEN=`cat $RESPONSE_FILE | grep token | awk '{print $2'} | sed -e 's/"//g' -e 's/,//g'`
     if [ -z "$GITHUB_OAUTH_TOKEN" ]; then
         echo "Did not get OAUth token:"
-        cat $RESPONSE_FILE
+        echo $RESPONSE_FILE
         exit 1
     fi
 
@@ -60,5 +60,5 @@ convert \
     xc:$BACKGROUND_COLOR \
     -font "$FONT_PATH" \
     -pointsize $FONT_SIZE \
-    -draw "gravity center fill white text 0,0 '$ZEN_TEXT'" \
+    -draw "gravity center fill $FONT_COLOR text 0,0 '$ZEN_TEXT'" \
     $WALLPAPER_PATH/zen-wallpaper.png
