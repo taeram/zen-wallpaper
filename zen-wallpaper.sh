@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BACKGROUND_COLOR="black"
-FONT_COLOR="#111"
+FONT_COLOR="#555"
 FONT_PATH=$HOME/.fonts/Inconsolata.otf
 FONT_SIZE=50
 FONT_URL="http://www.levien.com/type/myfonts/Inconsolata.otf"
@@ -62,3 +62,6 @@ convert \
     -pointsize $FONT_SIZE \
     -draw "gravity center fill $FONT_COLOR text 0,0 '$ZEN_TEXT'" \
     $WALLPAPER_PATH/zen-wallpaper.png
+
+# Set the wallpaper
+gsettings set org.gnome.desktop.background picture-uri file:///home/jpatching/Pictures/zen-wallpaper.png

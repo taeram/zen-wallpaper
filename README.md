@@ -17,14 +17,14 @@ Simply run the script, and it will install all necessary dependencies, and gener
 The script requires a single argument, which is the path that the auto generated wallpaper will be saved to.
 
 ```bash
-./zen-wallpaper $HOME/Pictures
+./zen-wallpaper.sh $HOME/Pictures
 ```
 
 Once the script has been run for the first time, you'll find a `zen-wallpaper.png` file in your `$HOME/Pictures` directory,
 assuming that's the path you used.
 
-Now, set the wallpaper as your desktop background. 
+Now, set the wallpaper as your desktop background.
 
-When you want a new Zen saying, simply re-run the script with the same arguments. The script will overwrite the 
+When you want a new Zen saying, simply re-run the script with the same arguments. The script will overwrite the
 original `zen-wallpaper.png` file, and Ubuntu will detect the change and automatically show the new wallpaper.
 
