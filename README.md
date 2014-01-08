@@ -27,8 +27,3 @@ Now, set the wallpaper as your desktop background.
 
 When you want a new Zen saying, simply re-run the script with the same arguments. The script will overwrite the
 original `zen-wallpaper.png` file, and Ubuntu will detect the change and automatically show the new wallpaper.
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/taeram/zen-wallpaper/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
